@@ -1,0 +1,147 @@
+{
+  "name": "handle-firebase-share",
+  "version": "0.1.0-beta.5",
+  "private": false,
+  "description": "Firebase account management application",
+  "keywords": [
+    "APP",
+    "ELECTRON",
+    "JAVASCRIPT",
+    "FIREBASE"
+  ],
+  "homepage": "https://github.com/IamBeltran/handle-firebase-share#readme",
+  "bugs": {
+    "url": "https://github.com/IamBeltran/handle-firebase-share/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IamBeltran/handle-firebase-share.git"
+  },
+  "license": "MIT",
+  "author": "Victor Giovanni Beltrán Rodríguez <beltran-victor@outlook.com> (https://vgbr-dev.blogspot.com)",
+  "contributors": [
+    "Victor Giovanni Beltrán Rodriguez <beltran-victor@outlook.com> (https://vgbr-dev.blogspot.com)"
+  ],
+  "main": "main.js",
+  "scripts": {
+    "dev": "electron .",
+    "dist": "electron-builder --win --publish never",
+    "release": "env-cmd electron-builder --publish always --win",
+    "postinstall": "electron-builder install-app-deps",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:mocha": "gulp test:simple",
+    "quick:test": "cross-env NODE_ENV=test nodemon ./quick.test.js"
+  },
+  "dependencies": {
+    "electron-devtools-installer": "^2.2.4",
+    "electron-is-dev": "^1.1.0",
+    "electron-log": "^3.0.7",
+    "electron-reload": "^1.5.0",
+    "electron-store": "^4.0.0",
+    "electron-updater": "^4.1.2",
+    "firebase": "^6.4.2",
+    "firebase-admin": "^8.4.0",
+    "firestore-export-import": "^0.2.7",
+    "node-notifier": "^5.4.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "ansi-colors": "^4.1.1",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "chai": "^4.2.0",
+    "concurrently": "^4.1.2",
+    "cross-env": "^5.2.0",
+    "devtron": "^1.4.0",
+    "electron": "^5.0.8",
+    "electron-builder": "^21.2.0",
+    "electron-builder-squirrel-windows": "^21.2.0",
+    "env-cmd": "^9.0.3",
+    "eslint": "^6.2.2",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-config-stylelint": "^11.1.0",
+    "eslint-formatter-pretty": "^2.1.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "fancy-log": "^1.3.3",
+    "gulp": "^4.0.2",
+    "gulp-cached": "^1.1.1",
+    "gulp-eslint": "^6.0.0",
+    "gulp-if": "^3.0.0",
+    "gulp-mocha": "^7.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "husky": "^3.0.4",
+    "lint-staged": "^9.2.4",
+    "mocha": "^6.2.0",
+    "mochawesome": "^4.1.0",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.18.2",
+    "spectron": "^8.0.0",
+    "stylelint": "^10.1.0",
+    "stylelint-config-prettier": "^5.2.0",
+    "stylelint-config-standard": "^18.3.0",
+    "wait-on": "^3.3.0",
+    "yargs": "^14.0.0"
+  },
+  "engines": {},
+  "engineStrict": false,
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [],
+  "analyze": true,
+  "nodemonConfig": {
+    "ignore": [
+      "*.json"
+    ]
+  },
+  "build": {
+    "appId": "com.electron.handlefirebaseshare",
+    "productName": "handle-firebase-share",
+    "copyright": "Copyright © year 2019 ${author}",
+    "artifactName": "${name}-${version}-${platform}.${ext}",
+    "asar": true,
+    "directories": {
+      "output": "release",
+      "buildResources": "assets"
+    },
+    "files": [
+      "main.js",
+      "node_modules/**/*",
+      "system/**/*",
+      "yarn.lock",
+      "README.md",
+      "package.json",
+      "package-lock.json",
+      "assets/**/*",
+      "package.json"
+    ],
+    "publish": [
+      {
+        "provider": "github",
+        "repo": "handle-firebase-share",
+        "owner": "IamBeltran",
+        "private": false
+      }
+    ],
+    "win": {
+      "icon": "assets/icons/256x256.png",
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": true
+    },
+    "electronVersion": "5.0.8"
+  }
+}

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<!-- SECTION: META TAGS -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- !SECTION -->
+
+		<!-- SECTION: INCLUDE CSS FILES -->
+		<!-- NOTE: Import Google Icon Font -->
+		<link type="text/css" rel="stylesheet" href="assets/css/materialicons/materialicons.css"  media="screen,projection"/>
+
+		<!-- NOTE: Import materialize.css -->
+		<link type="text/css" rel="stylesheet" href="assets/css/materialize/materialize.min.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="assets/css/style.css"/>
+		<!-- !SECTION -->
+
+		<title>Editar usuario</title>
+	</head>
+	<body>
+
+		<!-- SECTION: OUTER-WRAPPER -->
+		<div id="outer-wrapper" class="container">
+
+			<!-- SECTION: header-title -->
+			<header id="header-title" class="row">
+				<div class="col s12 grey darken-4 center-align">
+					<p class="flow-text">Modifica la información del usuario</p>
+				</div>
+			</header>
+			<!-- !SECTION -->
+
+			<!-- SECTION: main-card -->
+			<main id="main-add-user" class="row">
+
+				<!-- SECTION: form-add-user -->
+				<form id="form-set-user" class="col s12">
+					<div class="row">
+						<div class="input-field col s12">
+							<i class="material-icons prefix">account_circle</i>
+							<input id="uid" type="hidden" name="uid" class="validate" placeholder="uid">
+							<input id="displayName" type="text" name="displayName" class="validate" placeholder="Nombre">
+							<label for="displayName">Nombre</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<i class="material-icons prefix">email</i>
+							<input id="email" type="email" name="email" class="validate" placeholder="Email">
+							<label for="email">Email</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<i class="material-icons prefix">lock</i>
+							<input id="password" type="password" name="password" class="validate" placeholder="Password">
+							<label for="password">Password</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<button type="button" class="btn waves-effect waves-light" name="action" onclick="doSetUser()">Salvar</button>
+						</div>
+					</div>
+				</form>
+				<!-- !SECTION -->
+
+			</main>
+			<!-- !SECTION -->
+
+		</div>
+		<!-- !SECTION -->
+
+		<!-- SECTION: INCLUDE JAVASCRIPT FILES -->
+
+		<!-- NOTE: JavaScript at end of body for optimized loading -->
+		<!-- NOTE: materialize.min.js -->
+		<script type="text/javascript" src="assets/js/materialize/materialize.min.js"></script>
+
+		<!-- NOTE: add-user.js -->
+		<script type="text/javascript" src="assets/js/windows/set-user.js"></script>
+		<!-- !SECTION -->
+
+		<!-- SECTION: JAVASCRIPT INLINE -->
+		<script type="text/javascript">
+		</script>
+		<!-- !SECTION -->
+
+	</body>
+</html>
