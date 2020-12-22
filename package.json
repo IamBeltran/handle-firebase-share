@@ -42,7 +42,7 @@
     "firebase": "^6.4.2",
     "firebase-admin": "^8.4.0",
     "firestore-export-import": "^0.2.7",
-    "node-notifier": "^5.4.3"
+    "node-notifier": "^8.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
